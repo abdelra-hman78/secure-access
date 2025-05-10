@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>ادخل رقم الاستمارة</title>
+</head>
+<body style="text-align: center; font-family: Tahoma; margin-top: 100px;">
+    <h2>ادخل رقم الاستمارة</h2>
+    <div>
+        <input type="text" id="yearInput" placeholder="مثال: 2024" style="width: 100px;" />
+        -
+        <input type="text" id="formInput" placeholder="رقم الاستمارة" style="width: 200px;" />
+    </div>
+    <br>
+    <button onclick="checkForm()">إدخال</button>
+    <p id="errorMsg" style="color: red;"></p>
+
+    <script>
+        function checkForm() {
+            var year = document.getElementById("yearInput").value.trim();
+            var number = document.getElementById("formInput").value.trim();
+
+            // الكود الصحيح (غيره حسب ما تحب)
+            var correctYear = "2024";
+            var correctNumber = "02863866";
+
+            if (year === correctYear && number === correctNumber) {
+                window.location.href = "https://sites.google.com/view/your-site-link"; // غيّر ده برابط موقعك
+            } else {
+                document.getElementById("errorMsg").textContent = "رقم الاستمارة غير صحيح!";
+            }
+        }
+    </script>
+</body>
+</html>
